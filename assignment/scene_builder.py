@@ -85,22 +85,78 @@ cmds.move(building_x, building_height / 2.0, building_z, building)
 #   - Name the object meaningfully with the 'name' parameter or cmds.rename().
 #   - Position it so it sits on the ground (not floating or buried).
 # ---------------------------------------------------------------------------
+building_width = 4
+building_height = 6
+building_depth = 4
+building_x = 8
+building_z = -5
+#Building is placed diagonal of the first
 
+building = cmds.polyCube(
+    name="building_02",
+#Building is named building_02
+    width=building_width,
+    height=building_height,
+    depth=building_depth,
+)[0]
+
+cmds.move(building_x, building_height / 2.0, building_z, building)
 
 # ---------------------------------------------------------------------------
 # TODO: Add Object 3
 # ---------------------------------------------------------------------------
+building_width = 4
+building_height = 6
+building_depth = 4
+building_x = 8
+building_z = 5
 
+building = cmds.polyCube(
+    name="building_03",
+    width=building_width,
+    height=building_height,
+    depth=building_depth,
+)[0]
+cmds.move(building_x, building_height / 2.0, building_z, building)
+#All same as 1 and 2, but different name and position
 
 # ---------------------------------------------------------------------------
 # TODO: Add Object 4
 # ---------------------------------------------------------------------------
+building_width = 4
+building_height = 6
+building_depth = 4
+building_x = -8
+building_z = -5
 
+building = cmds.polyCube(
+    name="building_04",
+    width=building_width,
+    height=building_height,
+    depth=building_depth,
+)[0]
+cmds.move(building_x, building_height / 2.0, building_z, building)
 
 # ---------------------------------------------------------------------------
 # TODO: Add Object 5
 # ---------------------------------------------------------------------------
+building_radius = 2
+#Radius of cylinder is named building_radius and is 2
+building_height = 6
+building_subdivisions = 20
+#Cylinder subdivisions is named building_subdivisions and is 20
+building_x = 0
+building_z = 0
+#Position is at (0,0)
 
+building = cmds.polyCylinder(
+#Create cylinder instead of cube
+    name="building_05",
+    radius=building_radius,
+    height=building_height,
+    sx=building_subdivisions,
+)[0]
+cmds.move(building_x, building_height / 2.0, building_z, building)
 
 # ---------------------------------------------------------------------------
 # TODO (Optional): Add more objects to make your scene more interesting!
